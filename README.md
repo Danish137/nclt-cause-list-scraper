@@ -192,7 +192,8 @@ nclt-scraper/
 ```
 
 ---
-📸 Screenshots
+## 📸 Screenshots
+
 🔹 Swagger UI
 ![swagger-ui](images/swagger.png)
 
@@ -202,7 +203,8 @@ nclt-scraper/
 🔹 Docker Running Container
 ![docker-run](images/docker_ps.png)
 
-⚙️ Tech Stack
+## ⚙️ Tech Stack
+
 Python 3.11
 
 FastAPI
@@ -226,7 +228,7 @@ PDF data is not parsed (links only, no OCR)
 
 Captcha format assumed to remain math-based
 
-🚀 Future Improvements
+## 🚀 Future Improvements
 
 Bench autocomplete endpoint
 
