@@ -32,7 +32,7 @@ This service automates retrieval into machine-friendly JSON with optional filter
 ---
 
 ## 🧱 Architecture
-
+```txt
 ┌─────────────────────────┐
 │ FastAPI │
 │ (Request Validation) │
@@ -58,7 +58,7 @@ This service automates retrieval into machine-friendly JSON with optional filter
 │ HTTP + NCLT Web │
 └─────────────────────────┘
 
-
+```
 ---
 
 ## 🔁 Data Flow Diagram
