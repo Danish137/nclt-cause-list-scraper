@@ -4,6 +4,20 @@ A FastAPI-based backend service that scrapes **NCLT (National Company Law Tribun
 Supports filtering by date range & bench court, handles captcha, and exposes HTTP APIs + Docker support.
 
 ---
+## 📌 Table of Contents
+- [Features](#-features)
+- [Architecture](#-architecture)
+- [Data Flow Diagram](#-data-flow-diagram)
+- [Captcha Strategy](#-captcha-strategy)
+- [API Usage](#-api-usage)
+- [Run Locally](#-run-locally)
+- [Run with Docker](#-run-with-docker)
+- [Tests](#-tests)
+- [Project Structure](#-project-structure)
+- [Screenshots](#-screenshots)
+- [Tech Stack](#️-tech-stack)
+- [Future Improvements](#-future-improvements)
+
 
 ## ✨ Features
 
@@ -21,13 +35,6 @@ Supports filtering by date range & bench court, handles captcha, and exposes HTT
 - Async I/O for non-blocking scraping
 - Dockerized runtime
 - Unit tests included
-
----
-
-## 📍 Problem Context
-
-NCLT publishes daily cause lists but only via an unstructured web interface.  
-This service automates retrieval into machine-friendly JSON with optional filtering.
 
 ---
 
@@ -101,7 +108,7 @@ GET /api/cause-list
 | to_date    | Yes      | YYYY-MM-DD | `2025-01-20` |
 | court      | Optional | string | `Mumbai Bench Court-I` |
 
-💻 Run Locally (without Docker)
+## 💻 Run Locally
 ```bash
 python3 -m venv venv
 source venv/bin/activate     # Windows: venv\Scripts\activate
@@ -115,7 +122,8 @@ http://localhost:8000/docs
 ### **Example cURL**
 
 ```bash
-curl "http://localhost:8000/api/cause-list?from_date=2025-01-01&to_date=2025-01-05&court=Mumbai%20Bench%20Court-I"
+http://localhost:8000/api/cause-list?from_date=2025-01-01&to_date=2025-01-05&court=Mumbai%20Bench%20Court-I
+```
 Example Successful Response
 {
   "success": true,
@@ -133,7 +141,7 @@ Example Successful Response
   "message": "Data fetched successfully"
 }
 ```
-🐳 Run with Docker
+## 🐳 Run with Docker
 1. Build
 ```bash
 docker build -t nclt-scraper -f docker/Dockerfile .
@@ -184,7 +192,7 @@ nclt-scraper/
 ```
 
 ---
-📸 Screenshots (placeholders)
+📸 Screenshots
 🔹 Swagger UI
 ![swagger-ui](images/swagger.png)
 
@@ -219,16 +227,9 @@ PDF data is not parsed (links only, no OCR)
 Captcha format assumed to remain math-based
 
 🚀 Future Improvements
-Async batch scraping
 
 Bench autocomplete endpoint
 
 PDF parsing & text extraction
 
-Redis caching
-
-AI/ML captcha fallback
-
 UI frontend wrapper
-
-Kubernetes deployment target
