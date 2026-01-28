@@ -186,13 +186,13 @@ nclt-scraper/
 ---
 📸 Screenshots (placeholders)
 🔹 Swagger UI
-![swagger-ui](docs/images/swagger.png)
+![swagger-ui](images/swagger.png)
 
 🔹 Sample JSON Output
-![json-output](docs/images/sample.png)
+![json-output](images/sample.png)
 
 🔹 Docker Running Container
-![docker-run](docs/images/docker_ps.png)
+![docker-run](images/docker_ps.png)
 
 ⚙️ Tech Stack
 Python 3.11
